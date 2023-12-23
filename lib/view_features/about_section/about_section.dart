@@ -19,7 +19,7 @@ class AboutSection extends StatelessWidget {
             height: 400, width: 250,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: AppColors.primaryColor, width: 5),
+              border: Border.all(color: AppColors.colorWhite, width: 5),
               image: const DecorationImage(image: AssetImage(AppImages.myImage), fit: BoxFit.fill)
             ),
           ),
@@ -38,7 +38,7 @@ class AboutSection extends StatelessWidget {
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       color: AppColors.transparentColor,
-                      border: Border.all(color: AppColors.primaryColor, width: 1.5),
+                      border: Border.all(color: AppColors.colorWhite, width: 1.5),
                       borderRadius: BorderRadius.circular(12)
                   ),
                   child: RichText(
@@ -48,7 +48,7 @@ class AboutSection extends StatelessWidget {
                           TextSpan(
                               text: "About ",
                               style: GoogleFonts.montserrat(
-                                  color: AppColors.primaryColor,
+                                  color: AppColors.colorWhite,
                                   fontSize: 24,
                                   fontWeight: FontWeight.w400
                               )
@@ -56,7 +56,7 @@ class AboutSection extends StatelessWidget {
                           TextSpan(
                               text: "Me",
                               style: GoogleFonts.montserrat(
-                                  color: AppColors.primaryColor,
+                                  color: AppColors.colorWhite,
                                   fontSize: 24,
                                   fontWeight: FontWeight.w700
                               )
@@ -74,7 +74,7 @@ class AboutSection extends StatelessWidget {
                       "I am very enthusiastic about bringing the technical and visual aspects of digital products to life. "
                       "User experience, pixel perfect design, and writing clear, readable, highly performant code matters to me.",
                       style: GoogleFonts.montserrat(
-                        color: AppColors.primaryColor,
+                        color: AppColors.colorWhite,
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                       ),
@@ -85,7 +85,7 @@ class AboutSection extends StatelessWidget {
                       "Now, in my early thirties, 2 years after starting my app development journey, "
                       "I'm building mobile applications using modern technologies such as Flutter, Dart, Firebase, Socket.io, and much more.",
                       style: GoogleFonts.montserrat(
-                        color: AppColors.primaryColor,
+                        color: AppColors.colorWhite,
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                       ),
@@ -96,7 +96,7 @@ class AboutSection extends StatelessWidget {
                       "witnessing the journey of early startups or enjoying some free time. "
                       "You can follow me on LinkedIn where I share tech-related bites and build in public, or you can follow me on GitHub.",
                       style: GoogleFonts.montserrat(
-                        color: AppColors.primaryColor,
+                        color: AppColors.colorWhite,
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                       ),

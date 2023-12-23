@@ -51,12 +51,13 @@ class ExperienceSection extends StatelessWidget {
         const Gap(60),
         Column(
           children: List.generate(MyExperiencesData.experienceData.length, (index) => Container(
-            margin: const EdgeInsetsDirectional.only(bottom: 40),
+            margin: const EdgeInsetsDirectional.only(bottom: 32),
             width: MediaQuery.of(context).size.width,
-            padding: const EdgeInsetsDirectional.symmetric(horizontal: 16, vertical: 16),
+            padding: const EdgeInsetsDirectional.symmetric(horizontal: 24, vertical: 30),
             decoration: BoxDecoration(
               color: MyExperiencesData.experienceData[index].boxColor,
               borderRadius: BorderRadius.circular(12),
+              border: index % 2 == 0 ? Border.all(color: AppColors.primaryColor, width: 1) : null
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

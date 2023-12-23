@@ -6,6 +6,7 @@ import 'package:mirza_dev/utils/constant/image_string/app_images.dart';
 import 'package:mirza_dev/view_features/about_section/about_section.dart';
 import 'package:mirza_dev/view_features/experience_section/experience_section.dart';
 import 'package:mirza_dev/view_features/home_section/home_section.dart';
+import 'package:mirza_dev/view_features/project_section/project_section.dart';
 import 'package:mirza_dev/view_features/skill_section/skill_section.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -225,7 +226,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Container(
                           key: navigatorKeys[2],
                           width: MediaQuery.of(context).size.width,
-                          color: AppColors.colorWhite,
+                          color: AppColors.primaryColor,
                           padding: const EdgeInsetsDirectional.symmetric(vertical: 60, horizontal: 80),
                           child: const AboutSection(),
                         ),
@@ -233,11 +234,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         // TODO: project_section
                         Container(
                           key: navigatorKeys[3],
-                          height: 900,
                           width: MediaQuery.of(context).size.width,
-                          color: AppColors.primaryColor,
-                          padding: const EdgeInsetsDirectional.symmetric(vertical: 40, horizontal: 40),
-                          child: Container(),
+                          color: AppColors.colorWhite,
+                          padding: const EdgeInsetsDirectional.symmetric(vertical: 60, horizontal: 80),
+                          child: const ProjectSection(),
                         ),
 
                         // TODO: contact_section
@@ -245,7 +245,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           key: navigatorKeys[4],
                           height: 900,
                           width: MediaQuery.of(context).size.width,
-                          color: AppColors.colorWhite,
+                          color: AppColors.primaryColor,
                           padding: const EdgeInsetsDirectional.symmetric(vertical: 40, horizontal: 40),
                           child: Container(),
                         ),
