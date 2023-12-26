@@ -57,7 +57,7 @@ class ExperienceSection extends StatelessWidget {
             decoration: BoxDecoration(
               color: MyExperiencesData.experienceData[index].boxColor,
               borderRadius: BorderRadius.circular(12),
-              border: index % 2 == 0 ? Border.all(color: AppColors.colorAsh, width: 1) : null
+              border: index % 2 == 0 ? Border.all(color: AppColors.colorBlack.withOpacity(0.2), width: 1) : null
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

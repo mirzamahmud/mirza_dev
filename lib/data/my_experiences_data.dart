@@ -6,7 +6,7 @@ class MyExperiencesData{
 
   static List<MyExperiencesModel> experienceData = [
 
-    MyExperiencesModel(
+    const MyExperiencesModel(
         imageSrc: AppImages.bdCallingImage,
         companyName: "Software Developer at bdCalling IT Ltd.",
         duration: "Jul 5, 2023 -- Running",
@@ -17,7 +17,7 @@ class MyExperiencesData{
         boxColor: AppColors.transparentColor
     ),
 
-    const MyExperiencesModel(
+    MyExperiencesModel(
         imageSrc: AppImages.theSoftKingImage,
         companyName: "Jr. Software Developer at THESOFTKING Limited",
         duration: "Aug 5, 2022 -- Jun 30, 2023",
@@ -25,10 +25,10 @@ class MyExperiencesData{
         "Here I Converted a Figma design into efficient Flutter code, created reusable and dependable code while focusing on performance and responsiveness. "
         "Worked with outside data sources and APIs and worked on projects such as Fintech, Crypto Wallet, Service Apps, etc. "
         "Worked with cross-functional teams to validate requirements, devise solutions, execute new features and apps were deployed to ensure a unified user experience.",
-        boxColor: AppColors.colorBlack
+        boxColor: AppColors.colorBlack.withOpacity(0.7)
     ),
 
-    MyExperiencesModel(
+    const MyExperiencesModel(
         imageSrc: AppImages.opusImage,
         companyName: "Software Developer Intern at OPUS Technology Ltd.",
         duration: "Apr 9, 2022 -- Jul 31, 2022",
