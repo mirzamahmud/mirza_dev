@@ -8,6 +8,7 @@ class AppIcons{
 
   static const String cPlusPlusIcon = "assets/icons/c_plus.png";
   static const String javaIcon = "assets/icons/java.png";
+  static const String kotlinIcon = "assets/icons/kotlin.png";
   static const String dartIcon = "assets/icons/dart.png";
   static const String flutterIcon = "assets/icons/flutter.png";
   static const String androidIcon = "assets/icons/android.png";

@@ -21,7 +21,7 @@ class ProjectSection extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
               color: AppColors.transparentColor,
-              border: Border.all(color: AppColors.primaryColor, width: 1.5),
+              border: Border.all(color: AppColors.colorWhite, width: 1.5),
               borderRadius: BorderRadius.circular(12)
           ),
           child: RichText(
@@ -31,7 +31,7 @@ class ProjectSection extends StatelessWidget {
                   TextSpan(
                       text: "My ",
                       style: GoogleFonts.montserrat(
-                          color: AppColors.primaryColor,
+                          color: AppColors.colorWhite,
                           fontSize: 24,
                           fontWeight: FontWeight.w400
                       )
@@ -39,7 +39,7 @@ class ProjectSection extends StatelessWidget {
                   TextSpan(
                       text: "Projects",
                       style: GoogleFonts.montserrat(
-                          color: AppColors.primaryColor,
+                          color: AppColors.colorWhite,
                           fontSize: 24,
                           fontWeight: FontWeight.w700
                       )
@@ -58,33 +58,36 @@ class ProjectSection extends StatelessWidget {
             return Padding(
               padding: EdgeInsetsDirectional.only(bottom: index == 3 ? 0 : 40),
               child: index % 2 == 0 ? Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: 400, width: 500,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(18),
-                        image: DecorationImage(image: AssetImage(MyProjectData.projectData[index].imageSrc), fit: BoxFit.fill)
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: 400, width: 500,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          image: DecorationImage(image: AssetImage(MyProjectData.projectData[index].imageSrc), fit: BoxFit.fill),
+                      ),
                     ),
                   ),
                   const Gap(40),
                   Expanded(
+                    flex: 2,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           "${index + 1}".padLeft(2, "0"),
-                          style: GoogleFonts.montserrat(color: AppColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 32),
+                          style: GoogleFonts.montserrat(color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontSize: 32),
                         ),
                         const Gap(16),
                         Text(
                           MyProjectData.projectData[index].projectName,
-                          style: GoogleFonts.montserrat(color: AppColors.primaryColor, fontWeight: FontWeight.w700, fontSize: 24),
+                          style: GoogleFonts.montserrat(color: AppColors.colorWhite, fontWeight: FontWeight.w700, fontSize: 24),
                         ),
                         const Gap(8),
                         Text(
                           MyProjectData.projectData[index].shortDescription,
-                          style: GoogleFonts.montserrat(color: AppColors.primaryColor, fontWeight: FontWeight.normal, fontSize: 16),
+                          style: GoogleFonts.montserrat(color: AppColors.colorWhite, fontWeight: FontWeight.normal, fontSize: 16),
                         ),
                         const Gap(16),
                         Wrap(
@@ -94,12 +97,12 @@ class ProjectSection extends StatelessWidget {
                               width: 100,
                               padding: const EdgeInsetsDirectional.all(8),
                               alignment: Alignment.center,
-                              decoration: BoxDecoration(color: AppColors.transparentColor, borderRadius: BorderRadius.circular(8), border: Border.all(color: AppColors.primaryColor, width: 1)),
+                              decoration: BoxDecoration(color: AppColors.transparentColor, borderRadius: BorderRadius.circular(8), border: Border.all(color: AppColors.colorWhite, width: 1)),
                               child: Text(
                                 MyProjectData.projectData[index].tools[toolIndex],
                                 textAlign: TextAlign.center,
                                 style: GoogleFonts.montserrat(
-                                    color: AppColors.primaryColor,
+                                    color: AppColors.colorWhite,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500
                                 ),
@@ -111,25 +114,25 @@ class ProjectSection extends StatelessWidget {
                   ),
                 ],
               ) : Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
+                    flex: 2,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           "${index + 1}".padLeft(2, "0"),
-                          style: GoogleFonts.montserrat(color: AppColors.primaryColor, fontWeight: FontWeight.bold, fontSize: 32),
+                          style: GoogleFonts.montserrat(color: AppColors.colorWhite, fontWeight: FontWeight.bold, fontSize: 32),
                         ),
                         const Gap(16),
                         Text(
                           MyProjectData.projectData[index].projectName,
-                          style: GoogleFonts.montserrat(color: AppColors.primaryColor, fontWeight: FontWeight.w700, fontSize: 24),
+                          style: GoogleFonts.montserrat(color: AppColors.colorWhite, fontWeight: FontWeight.w700, fontSize: 24),
                         ),
                         const Gap(8),
                         Text(
                           MyProjectData.projectData[index].shortDescription,
-                          style: GoogleFonts.montserrat(color: AppColors.primaryColor, fontWeight: FontWeight.normal, fontSize: 16),
+                          style: GoogleFonts.montserrat(color: AppColors.colorWhite, fontWeight: FontWeight.normal, fontSize: 16),
                         ),
                         const Gap(16),
                         Wrap(
@@ -139,12 +142,12 @@ class ProjectSection extends StatelessWidget {
                               width: 100,
                               padding: const EdgeInsetsDirectional.all(8),
                               alignment: Alignment.center,
-                              decoration: BoxDecoration(color: AppColors.transparentColor, borderRadius: BorderRadius.circular(8), border: Border.all(color: AppColors.primaryColor, width: 1)),
+                              decoration: BoxDecoration(color: AppColors.transparentColor, borderRadius: BorderRadius.circular(8), border: Border.all(color: AppColors.colorWhite, width: 1)),
                               child: Text(
                                 MyProjectData.projectData[index].tools[toolIndex],
                                 textAlign: TextAlign.center,
                                 style: GoogleFonts.montserrat(
-                                    color: AppColors.primaryColor,
+                                    color: AppColors.colorWhite,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500
                                 ),
@@ -155,17 +158,58 @@ class ProjectSection extends StatelessWidget {
                     )
                   ),
                   const Gap(40),
-                  Container(
-                    height: 400, width: 500,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(18),
-                        image: DecorationImage(image: AssetImage(MyProjectData.projectData[index].imageSrc), fit: BoxFit.fill)
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: 400, width: 500,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          image: DecorationImage(image: AssetImage(MyProjectData.projectData[index].imageSrc), fit: BoxFit.fill)
+                      ),
                     ),
                   ),
                 ],
               ),
             );
           }),
+        ),
+        const Gap(100),
+
+        SizedBox(
+          width: 200,
+          child: MaterialButton(
+            onPressed: () {},
+            elevation: 0,
+            color: AppColors.transparentColor,
+            hoverColor: AppColors.colorWhite,
+            shape: RoundedRectangleBorder(
+                side: const BorderSide(color: AppColors.colorAsh, width: 1),
+                borderRadius: BorderRadius.circular(4)
+            ),
+            child: Padding(
+              padding: const EdgeInsetsDirectional.symmetric(horizontal: 32, vertical: 16),
+              child: Align(
+                alignment: Alignment.center,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "See More",
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.montserrat(
+                        color: AppColors.colorAsh,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500
+                      ),
+                    ),
+                    const Gap(8),
+                    const Icon(Icons.arrow_forward_rounded, color: AppColors.colorAsh, size: 24)
+                  ],
+                ),
+              ),
+            ),
+          ),
         )
       ],
     );

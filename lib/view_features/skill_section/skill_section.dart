@@ -13,7 +13,7 @@ class SkillSection extends StatelessWidget {
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Container(
           width: 300,
@@ -48,7 +48,7 @@ class SkillSection extends StatelessWidget {
             ),
           ),
         ),
-        const Gap(60),
+        const Gap(120),
         GridView.builder(
             shrinkWrap: true,
             addAutomaticKeepAlives: true,
@@ -77,7 +77,7 @@ class SkillSection extends StatelessWidget {
                 ),
                 child: Image.asset(
                   MySkillsData.skillData[index].imageSrc,
-                  color: index == 10 ? AppColors.colorWhite : null,
+                  color: index == 11 ? AppColors.colorWhite : null,
                   height: 50, width: 50,
                 ),
               ),

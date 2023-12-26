@@ -6,6 +6,7 @@ class MySkillsData{
   static final List<MySkillsModel> skillData = [
     const MySkillsModel(imageSrc: AppIcons.cPlusPlusIcon, title: "C++"),
     const MySkillsModel(imageSrc: AppIcons.javaIcon, title: "Java"),
+    const MySkillsModel(imageSrc: AppIcons.kotlinIcon, title: "Kotlin"),
     const MySkillsModel(imageSrc: AppIcons.dartIcon, title: "Dart"),
     const MySkillsModel(imageSrc: AppIcons.flutterIcon, title: "Flutter"),
     const MySkillsModel(imageSrc: AppIcons.androidIcon, title: "Android"),
